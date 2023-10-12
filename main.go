@@ -2,32 +2,26 @@ package main
 
 import "fmt"
 
-func maximumValue(strs []string) int {
+func kItemsWithMaximumSum(numOnes int, numZeros int, numNegOnes int, k int) int {
 	ans := 0
-	for _, str := range strs {
-		temp := 0
-		for _, v := range str {
-			if v >= '0' && v <= '9' {
-				temp = temp*10 + int(v-'0')
-			} else {
-				temp = len(str)
-				ans = max(ans, temp)
-				break
-			}
-			ans = max(ans, temp)
-		}
+	if k > numOnes {
+		ans = numOnes
+		k -= numOnes
+	} else {
+		return k
 	}
-	return ans
-}
-func max(a, b int) int {
-	if a > b {
-		return a
+	if k > numZeros {
+		k -= numZeros
+	} else {
+		return ans
 	}
-	return b
+
+	return ans - k
 }
+
 func main() {
-	str := []string{"alic3", "bob", "3", "4", "00000"}
-	fmt.Println(maximumValue(str))
+
+	fmt.Println(kItemsWithMaximumSum(3, 2, 0, 2))
 
 }
 
