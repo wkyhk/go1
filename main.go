@@ -1,21 +1,34 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
-func main() {
-	var coins []int
-	coins = []int{2, 3, 10}
-	fmt.Println(minCount(coins))
-}
-func minCount(coins []int) int {
-	num := 0
-	for _, v := range coins {
-		num += int(math.Ceil(float64(v) / float64(2)))
+func maximumValue(strs []string) int {
+	ans := 0
+	for _, str := range strs {
+		temp := 0
+		for _, v := range str {
+			if v >= '0' && v <= '9' {
+				temp = temp*10 + int(v-'0')
+			} else {
+				temp = len(str)
+				ans = max(ans, temp)
+				break
+			}
+			ans = max(ans, temp)
+		}
 	}
-	return num
+	return ans
+}
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+func main() {
+	str := []string{"alic3", "bob", "3", "4", "00000"}
+	fmt.Println(maximumValue(str))
+
 }
 
 /* func main() {
