@@ -2,27 +2,21 @@ package main
 
 import "fmt"
 
-func kItemsWithMaximumSum(numOnes int, numZeros int, numNegOnes int, k int) int {
-	ans := 0
-	if k > numOnes {
-		ans = numOnes
-		k -= numOnes
-	} else {
-		return k
-	}
-	if k > numZeros {
-		k -= numZeros
-	} else {
-		return ans
-	}
-
-	return ans - k
-}
-
 func main() {
+	nums1 := []int{2, 2, 1}
+	fmt.Println(singleNumber(nums1))
+	nums2 := []int{4, 1, 2, 1, 2}
+	fmt.Println(singleNumber(nums2))
+	nums3 := []int{1}
+	fmt.Println(singleNumber(nums3))
 
-	fmt.Println(kItemsWithMaximumSum(3, 2, 0, 2))
-
+}
+func singleNumber(nums []int) int {
+	ans := 0
+	for _, v := range nums {
+		ans = ans ^ v
+	}
+	return ans
 }
 
 /* func main() {
