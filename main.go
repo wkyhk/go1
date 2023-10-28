@@ -1,22 +1,9 @@
 package main
 
-import "fmt"
+import "GO1/leetcode"
 
 func main() {
-	nums1 := []int{2, 2, 1}
-	fmt.Println(singleNumber(nums1))
-	nums2 := []int{4, 1, 2, 1, 2}
-	fmt.Println(singleNumber(nums2))
-	nums3 := []int{1}
-	fmt.Println(singleNumber(nums3))
-
-}
-func singleNumber(nums []int) int {
-	ans := 0
-	for _, v := range nums {
-		ans = ans ^ v
-	}
-	return ans
+	leetcode.TestmamatrixSum()
 }
 
 /* func main() {
