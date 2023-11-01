@@ -8,7 +8,7 @@ package leetcode
 
 import "sort"
 
-func hIndex(citations []int) int {
+func hIndex2(citations []int) int {
 	n := len(citations)
 	return n - sort.Search(n, func(x int) bool { return citations[x] >= n-x })
 }
