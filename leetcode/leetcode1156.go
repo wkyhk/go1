@@ -37,10 +37,3 @@ func MaxRepOpt1(text string) int {
 	}
 	return ans
 }
-
-func max(a, b int) int {
-	if a < b {
-		return b
-	}
-	return a
-}
