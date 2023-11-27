@@ -8,7 +8,8 @@ package leetcode
 
 func sumSubarrayMins(A []int) int {
 	// 单调栈+dp
-	stack, dp, res, mod := []int{}, make([]int, len(A)+1), 0, 1000000007
+
+	stack, dp, res, mod := []int{}, make([]int, len(A)+1), 0, int(1e9+7)
 	stack = append(stack, -1)
 
 	for i := 0; i < len(A); i++ {
