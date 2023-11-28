@@ -66,7 +66,7 @@ func (this *FrontMiddleBackQueue) PopBack() int {
 	this.queue = (this.queue)[:len(this.queue)-1]
 	return ans
 }
-func TestLeetcode1670() {
+func TestLeetCode1670() {
 	q := Constructor()
 	q.PushFront(1)
 	q.PushBack(2)
