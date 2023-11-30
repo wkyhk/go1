@@ -1,7 +1,5 @@
 package leetcode
 
-import "fmt"
-
 /*
 1670. 设计前中后队列
 请你设计一个队列，支持在前，中，后三个位置的 push 和 pop 操作。
@@ -19,13 +17,15 @@ int popBack() 将 最后面 的元素从队列中删除并返回值，如果删�
 将 6 添加到 [1, 2, 3, 4, 5] 的中间位置，结果数组为 [1, 2, 6, 3, 4, 5] 。
 从 [1, 2, 3, 4, 5, 6] 的中间位置弹出元素，返回 3 ，数组变为 [1, 2, 4, 5, 6] 。
 */
-type FrontMiddleBackQueue struct {
+/*type FrontMiddleBackQueue struct {
 	queue []int
 }
+
 
 func Constructor() FrontMiddleBackQueue {
 	return FrontMiddleBackQueue{[]int{}}
 }
+
 
 func (this *FrontMiddleBackQueue) PushFront(val int) {
 	this.queue = append([]int{val}, this.queue...)
@@ -78,3 +78,4 @@ func TestLeetCode1670() {
 	fmt.Println(q.PopBack())
 	fmt.Println(q.PopFront())
 }
+*/
