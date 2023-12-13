@@ -8,7 +8,7 @@ package leetcode
 
 对于两个长度相同的字符串 a 和 b ，在 a 和 b 出现不同的第一个位置，如果该位置上 a 中对应字母比 b 中对应字母在字母表中出现顺序更早，则认为 a 的字典序比 b 的字典序要小。
 
-返回最终的回文字符串。
+返回最终回文字符串。
 链接:https://leetcode.cn/problems/lexicographically-smallest-palindrome/description/
 */
 func makeSmallestPalindrome(s string) string {
