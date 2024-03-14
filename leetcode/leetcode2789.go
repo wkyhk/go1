@@ -1,7 +1,5 @@
 package leetcode
 
-import "fmt"
-
 /*
 2789. 合并后数组中的最大元素
 给你一个下标从 0 开始、由正整数组成的数组 nums 。
@@ -22,10 +20,4 @@ func maxArrayValue(nums []int) int64 {
 		}
 	}
 	return int64(ans)
-}
-func TestLeetcode2789() {
-	nums1 := []int{2, 3, 7, 9, 3}
-	fmt.Println(maxArrayValue(nums1))
-	nums2 := []int{5, 3, 3}
-	fmt.Println(maxArrayValue(nums2))
 }
