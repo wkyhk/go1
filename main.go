@@ -1,8 +1,8 @@
 package main
 
-import "fmt"
+import "GO1/leetcode"
 
 func main() {
-	fmt.Println("Hello, golang")
+	leetcode.TestLeetcode2789()
 
 }
