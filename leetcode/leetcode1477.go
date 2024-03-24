@@ -21,16 +21,16 @@ func minSumOfLengths(arr []int, target int) int {
 	pre := comPre(arr, result)
 	suf := comSuf(arr, result)
 
-	m := math.MaxInt64
+	m := math.MaxInt
 	for i := 0; i < len(arr)-1; i++ {
-		if pre[i] == math.MaxInt64 || suf[i+1] == math.MaxInt64 {
+		if pre[i] == math.MaxInt || suf[i+1] == math.MaxInt {
 			continue
 		}
 		if pre[i]+suf[i+1] < m {
 			m = pre[i] + suf[i+1]
 		}
 	}
-	if m == math.MaxInt64 {
+	if m == math.MaxInt {
 		return -1
 	}
 	return m
@@ -70,7 +70,7 @@ func comResult(arr []int, target int) [][3]int {
 }
 func comPre(arr []int, result [][3]int) []int {
 	ret := make([]int, len(arr))
-	pre := math.MaxInt64
+	pre := math.MaxInt
 	var reti, ri = 0, 0
 	for i := 0; i < len(arr); i++ {
 		if ri >= len(result) {
@@ -95,7 +95,7 @@ func comPre(arr []int, result [][3]int) []int {
 
 func comSuf(arr []int, result [][3]int) []int {
 	ret := make([]int, len(arr))
-	suf := math.MaxInt64
+	suf := math.MaxInt
 	var reti, ri = len(arr) - 1, len(result) - 1
 	for i := len(arr) - 1; i >= 0; i-- {
 		if ri < 0 {
