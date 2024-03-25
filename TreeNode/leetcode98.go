@@ -25,5 +25,5 @@ func IsValidBST(root *TreeNode) bool {
 		}
 		return Dfs(node.Right, max, node.Val) && Dfs(node.Left, node.Val, min)
 	}
-	return Dfs(root, math.MaxInt64, math.MinInt64)
+	return Dfs(root, math.MaxInt, math.MinInt)
 }
