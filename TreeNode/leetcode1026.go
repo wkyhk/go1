@@ -11,7 +11,7 @@ func maxAncestorDiff(root *TreeNode) int {
 	var bfs func(*TreeNode, int, int)
 	bfs = func(node *TreeNode, ma, mi int) {
 		if node == nil {
-			ans = max1(ans, ma-mi)
+			ans = max(ans, ma-mi)
 			return
 		}
 		if node.Val > ma {
@@ -25,11 +25,4 @@ func maxAncestorDiff(root *TreeNode) int {
 	}
 	bfs(root, root.Val, root.Val)
 	return ans
-}
-
-func max1(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
 }
