@@ -1,10 +1,5 @@
 package leetcode
 
-import (
-	"strconv"
-	"strings"
-)
-
 /*
 2734. 执行子串操作后的字典序最小字符串
 给你一个仅由小写英文字母组成的字符串 s 。在一步操作中，你可以完成以下行为：
@@ -24,10 +19,10 @@ func smallestString(s string) string {
 		t[len(t)-1] = 'z'
 		return string(t)
 	}
-	indexOfFirstA_AfterFirstNonA := findFirstA_AfterFirstNonA(t, indexOfFirstNonA)
+	indexOfFirstAAfterFirstNonA := findFirstAAfterFirstNonA(t, indexOfFirstNonA)
 	res := []byte{}
 	for i, ch := range t {
-		if indexOfFirstNonA <= i && i < indexOfFirstA_AfterFirstNonA {
+		if indexOfFirstNonA <= i && i < indexOfFirstAAfterFirstNonA {
 			res = append(res, ch-1)
 		} else {
 			res = append(res, ch)
@@ -46,7 +41,7 @@ func findFirstNonA(t []byte) int {
 	return len(t)
 }
 
-func findFirstA_AfterFirstNonA(t []byte, firstNonA int) int {
+func findFirstAAfterFirstNonA(t []byte, firstNonA int) int {
 	for i := firstNonA; i < len(t); i++ {
 		if t[i] == 'a' {
 			return i
