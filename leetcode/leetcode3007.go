@@ -1,13 +1,16 @@
 package leetcode
 
-import "math/bits"
+import (
+	"math/bits"
+)
 
 /*
 3007. 价值和小于等于 K 的最大数字
 给你一个整数 k 和一个整数 x 。整数 num 的价值是它的二进制表示中在 x，2x，3x 等位置处
 设置位
- 的数目（从最低有效位开始）。下面的表格包含了如何计算价值的例子。
- num 的 累加价值 是从 1 到 num 的数字的 总 价值。如果 num 的累加价值小于或等于 k 则被认为是 廉价 的。
+
+	的数目（从最低有效位开始）。下面的表格包含了如何计算价值的例子。
+	num 的 累加价值 是从 1 到 num 的数字的 总 价值。如果 num 的累加价值小于或等于 k 则被认为是 廉价 的。
 
 请你返回 最大 的廉价数字。
 链接：https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/description/
